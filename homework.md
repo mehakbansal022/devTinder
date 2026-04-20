@@ -9,3 +9,17 @@
 -What are dependencies
 -what is the use of -g while npm install
 -Difference between tilda and caret (^ vs ~)
+
+
+-initialize git
+-.gitignore
+-create a remote repo in gihub
+-Push all code to remote origin
+-Play with routes and route extensions ex. /hello, / , /hello/2, /xyz
+-Order of the routes matter a lot
+-Install postman app and make a workSpace/collections > test API call
+-Write logic to handle GET , POST , DELETE API calls and test them on postman
+-Explore routing and use of ?, +, *, () in the route
+-Use of regex in routes /a/, /.*fly$/
+-Reading the query params int he routes
+-Reading the dynamic routes 
