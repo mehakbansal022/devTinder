@@ -23,3 +23,13 @@
 -Use of regex in routes /a/, /.*fly$/
 -Reading the query params int he routes
 -Reading the dynamic routes 
+
+-Multiple Route Handlers - Play with the code
+-next()
+-next functions and errors along with res.send()
+-app.use("/route",rH,[rH2,rH3],rH4,rH5);
+-What is MiddleWares
+-How Express Js basically handles requests behind the scene
+-Differnece b/w app.use() and app.all()
+-Write a dummy auth middleware for admin
+-Write a dummy auth middleware for all user routes , except /admin/login
