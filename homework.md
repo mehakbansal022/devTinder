@@ -33,3 +33,13 @@
 -Differnece b/w app.use() and app.all()
 -Write a dummy auth middleware for admin
 -Write a dummy auth middleware for all user routes , except /admin/login
+-Error Handling using app.use("/",(err,req,res,next) =>{});
+
+-Create a free cluster on  MongoDB official website (Mongo Atlas)
+-Install mongoose Library
+-Connect your application to the database "Connection-url"/devTinder
+-call the connectDB function and connection to the databse before station your application on 7777
+-Create a userSchema & user Model
+-Create POST / signUp API to add data to database
+-Push some Documents to API calls from Postman 
+-Error HAndling USing try , catch

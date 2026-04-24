@@ -1,28 +1,36 @@
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '1.1.1.1']);
+
 const express = require("express");
+const connectDB = require("./config/database");
+const User = require("./models/user");
 const app =  express();
-//const { adminAuth , userAuth } = require("./middlewares/auth");
-app.use("/",(err,req,res,next)=> {
-    if(err){
-        res.status(500).send("Something Went Error!!!");
-    }
-});
-app.get("/getUserData",(req,res)=>{
+
+app.post("/signUp", async (req,res) => {
+    const user = new User({
+        firstName: "Mehak",
+        lastName: "Bansal",
+        emailID: "mehak@bansal.com",
+        password: "mehak@123",
+    });
     try{
-        throw new Error("fhgvhgfkgj");
-        res.send("User Data Sent");
+        await user.save();
+        res.send("User Added Successfully!");
+    } catch(err){
+        res.status(400).send("Error Saving the user:"+ err.message);
     }
-    catch(err){
-        res.status(500).send("Some Error Contact Support Team");
-    }
+   
 });
 
-app.use("/",(err,req,res,next)=> {
-    if(err){
-        res.status(500).send("Some Error Contact Support Team");
-    }
-});
+connectDB()
+    .then(() => {
+        console.log("Database connection established...!!");
+        app.listen(7777 , ()=> {
+            console.log("Server is successfully listening on port 7777");
+        });
+    }).catch((err) => {
+        console.error("Database cannot be connected!!",err);
+    });
 
-app.listen(3000 , ()=> {
-    console.log("Server is successfully listening on port 3000");
-});
+
  
