@@ -68,3 +68,4 @@
 -Data Sanitizing -Add API vaidation for each field
 -Install validator
 -Explore validator library function and use vaidator function for password , email, photoURL
+-NEVER TRUST req.body
