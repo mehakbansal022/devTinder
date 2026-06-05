@@ -111,3 +111,17 @@ Create PATCH/prfile/Password API  => forget passwordAPI
 -What is the advantages and disadvantages in creating indexes?
 -Read more about compound indexes - https://www.mongodb.com/docs/manual/core/indexes/index-types/index-compound/
 -ALWAYS THINK ABOUT CORNER CASES
+
+-Write the code with proper validation of POST /request/review/:status/:requestId
+-Think process - GET vs POST
+-Read about ref and populate
+-Create GET /user/request/received with all the checks 
+-Create get user/connection 
+
+-Logic for get/feed API
+-Explore the $nin ,$and ,$ne and other query operator
+-pagination
+
+/feed?page=1&limit=10 => 1-10  => .skip(0) & .limit(10)
+/feed?page=2&limit=10 => 11-20  => .skip(10) & .limit(10)
+/feed?page=3&limit=10 => 21-30  => .skip(20) & .limit(10)

@@ -47,7 +47,7 @@ const userSchema = new mongoose.Schema({
     },
     photoUrl:{
         type : String,
-        default : "https://www.shutterstock.com/image-vector/isolated-object-avatar-dummy-symbol-260nw-1290296656.jpg",
+        default : "https://ukfostering.org.uk/wp-content/uploads/2016/11/dummy-female-img.jpg",
         validate(value) {
             if(!validator.isURL(value)){
                 throw new Error ("Invalid Photo URL: "+ value);
@@ -55,7 +55,8 @@ const userSchema = new mongoose.Schema({
         },
     },
     about:{
-        type : String
+        type : String,
+        default : "This is the dafault about of the user." ,
     },
     skills:{
         type : [String],
